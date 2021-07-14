@@ -19,7 +19,7 @@ if [[ "$CIRCLE_BRANCH" == "master" ]]; then
   if [[ "$VERSION" ]]; then
     set -e
 
-    IMAGE_NAME=${DOCKER_IMAGE_NAME:-"jshimko/meteor-launchpad"}
+    IMAGE_NAME=${DOCKER_IMAGE_NAME:-"badmark/meteor-launchpad"}
 
     # create a versioned tags
     docker tag $IMAGE_NAME:devbuild $IMAGE_NAME:$VERSION-devbuild
