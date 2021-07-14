@@ -1,5 +1,5 @@
-FROM debian:stable
-MAINTAINER Jeremy Shimko <jeremy.shimko@gmail.com>
+FROM debian:stretch
+MAINTAINER Mark Buckman <badmark@gmail.com>
 
 RUN groupadd -r node && useradd -m -g node node
 
@@ -7,8 +7,8 @@ RUN groupadd -r node && useradd -m -g node node
 ENV GOSU_VERSION 1.10
 
 # MongoDB
-ENV MONGO_VERSION 3.4.10
-ENV MONGO_MAJOR 3.4
+ENV MONGO_VERSION 4.4.6
+ENV MONGO_MAJOR 4.4
 ENV MONGO_PACKAGE mongodb-org
 
 # PhantomJS
@@ -22,12 +22,13 @@ ENV BUILD_SCRIPTS_DIR /opt/build_scripts
 # Add entrypoint and build scripts
 COPY scripts $BUILD_SCRIPTS_DIR
 RUN chmod -R 750 $BUILD_SCRIPTS_DIR
+
 # Define all --build-arg options
 ONBUILD ARG APT_GET_INSTALL
 ONBUILD ENV APT_GET_INSTALL $APT_GET_INSTALL
 
 ONBUILD ARG NODE_VERSION
-ONBUILD ENV NODE_VERSION ${NODE_VERSION:-8.9.0}
+ONBUILD ENV NODE_VERSION ${NODE_VERSION:-14.17.3}
 
 ONBUILD ARG NPM_TOKEN
 ONBUILD ENV NPM_TOKEN $NPM_TOKEN

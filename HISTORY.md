@@ -1,3 +1,10 @@
+## v2.3.2
+- Took over from Jeremy Shimko
+- Updated to Debian Stretch
+- Updated to Meteor 2.3.2
+- Updated to MongoDB 4.4.6
+- Updated to Node JS 14.17.3
+
 ## v2.3.0
 
 - Updates for Meteor 1.6 support

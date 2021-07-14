@@ -25,6 +25,8 @@ cd $APP_SOURCE_DIR
 printf "\n[-] Running npm install in app directory...\n\n"
 meteor npm install
 
+meteor npx browserslist@4.10 --update-db
+
 # build the bundle
 printf "\n[-] Building Meteor application...\n\n"
 mkdir -p $APP_BUNDLE_DIR
