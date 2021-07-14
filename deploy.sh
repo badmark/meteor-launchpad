@@ -3,7 +3,7 @@
 set -e
 
 # Example usage:
-# deploy.sh jshimko/meteor-launchpad v1.0.0
+# deploy.sh badmark/meteor-launchpad v1.0.0
 
 IMAGE_NAME=$1 # jshimko/meteor-launchpad
 VERSION=$2    # v1.0.0

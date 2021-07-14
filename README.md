@@ -3,10 +3,16 @@
 
 ### Build
 
+### New Version
+
+This is a fork of the original updating the base OS to Debian Stretch from Jessie to allow for easier install of "backport" projects in Jessie, i.e. ffmpeg
+
+Also aim to handle environment variables for private NPM repositories i.e. FortAwesome/FontAwesome
+
 Add the following to a `Dockerfile` in the root of your app:
 
 ```Dockerfile
-FROM jshimko/meteor-launchpad:latest
+FROM badmark/meteor-launchpad:latest
 ```
 
 Then you can build the image with:
